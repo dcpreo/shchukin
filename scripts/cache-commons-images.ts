@@ -95,8 +95,9 @@ async function loadSharp(): Promise<any | null> {
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
 async function download(url: string): Promise<Buffer | null> {
-  // Retry/backoff: Commons throttles bursts; a transient 429/5xx is not fatal.
-  const backoffs = [0, 800, 2000, 4000];
+  // Retry/backoff: Commons throttles on-demand thumbnail rendering; a transient
+  // 429/5xx is not fatal. Be patient — this is a one-time bulk operation.
+  const backoffs = [0, 1500, 4000, 9000, 18000];
   for (const wait of backoffs) {
     if (wait) await sleep(wait);
     try {
@@ -147,11 +148,43 @@ async function main(): Promise<void> {
   const manifest: Record<string, unknown> = {};
   const updated = new Map<string, ImageMeta>();
 
+  let cachedCount = 0;
+  let skipped = 0;
+  let failed = 0;
+
   for (const r of rows) {
     const meta = r.image;
     if (!meta.originalUrl) continue;
     const src = cacheSourceUrl(meta);
     if (!src) continue;
+
+    const cardPath = path.join(PUBLIC_IMAGES_DIR, `${r.slug}-1200.webp`);
+    const detailPath = path.join(PUBLIC_IMAGES_DIR, `${r.slug}-2400.webp`);
+    const localCard = `/images/collection/${r.slug}-1200.webp`;
+    const localDetail = `/images/collection/${r.slug}-2400.webp`;
+
+    // Resume support: if already cached, record it and skip the download so
+    // re-runs accumulate (and never re-fetch) past Commons rate-limits.
+    if (fs.existsSync(cardPath)) {
+      updated.set(r.slug, {
+        ...meta,
+        localPath: localCard,
+        license: meta.license,
+        verifiedAt: meta.verifiedAt ?? nowIso()
+      });
+      manifest[r.slug] = {
+        slug: r.slug,
+        card: localCard,
+        detail: fs.existsSync(detailPath) ? localDetail : localCard,
+        originalUrl: meta.originalUrl,
+        license: meta.license,
+        attribution: meta.attribution,
+        commonsFilePage: meta.commonsFilePage,
+        cachedAt: meta.verifiedAt ?? nowIso()
+      };
+      skipped++;
+      continue;
+    }
 
     // Recover a missing license straight from Commons so public-domain
     // paintings (whose LicenseShortName was absent at resolve time) can be
@@ -170,18 +203,15 @@ async function main(): Promise<void> {
 
     const buf = await download(src);
     if (!buf) {
-      console.warn(`download failed (skipped): ${r.slug}`);
+      console.warn(`download failed (will retry on next run): ${r.slug}`);
+      failed++;
       continue;
     }
-    await sleep(150);
 
     try {
       const img = sharp(buf, { failOn: "none" });
       const meta0 = await img.metadata();
       const srcWidth = meta0.width ?? 0;
-
-      const cardPath = path.join(PUBLIC_IMAGES_DIR, `${r.slug}-1200.webp`);
-      const detailPath = path.join(PUBLIC_IMAGES_DIR, `${r.slug}-2400.webp`);
 
       // Never upscale.
       const cardW = Math.min(1200, srcWidth || 1200);
@@ -191,11 +221,6 @@ async function main(): Promise<void> {
       if (detailW > cardW) {
         await sharp(buf).resize({ width: detailW, withoutEnlargement: true }).webp({ quality: 85 }).toFile(detailPath);
       }
-
-      const localCard = `/images/collection/${r.slug}-1200.webp`;
-      const localDetail = fs.existsSync(detailPath)
-        ? `/images/collection/${r.slug}-2400.webp`
-        : localCard;
 
       updated.set(r.slug, {
         ...meta,
@@ -211,16 +236,20 @@ async function main(): Promise<void> {
       manifest[r.slug] = {
         slug: r.slug,
         card: localCard,
-        detail: localDetail,
-        originalUrl: src,
+        detail: fs.existsSync(detailPath) ? localDetail : localCard,
+        originalUrl: meta.originalUrl,
         license,
         attribution,
         commonsFilePage: meta.commonsFilePage,
         cachedAt: nowIso()
       };
+      cachedCount++;
       console.log(`cached ${r.slug}`);
+      // Be patient between renders so Commons does not throttle us.
+      await sleep(900);
     } catch (e) {
       console.warn(`failed to process ${r.slug}: ${String(e)}`);
+      failed++;
     }
   }
 
@@ -235,7 +264,14 @@ async function main(): Promise<void> {
     images: manifest
   });
 
-  console.log(`Cached ${Object.keys(manifest).length} rights-cleared images.`);
+  console.log(
+    `Done. newly cached=${cachedCount}, already cached (skipped)=${skipped}, failed=${failed}, total on disk=${Object.keys(manifest).length}.`
+  );
+  if (failed > 0) {
+    console.log(
+      `${failed} downloads were throttled — just run \`npm run images:cache\` again to pick them up (already-cached files are skipped).`
+    );
+  }
 }
 
 main().catch((e) => {
