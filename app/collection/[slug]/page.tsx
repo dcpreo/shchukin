@@ -57,18 +57,19 @@ export default async function ObjectPage({
       <div className="grid gap-10 lg:grid-cols-[1fr_1.1fr]">
         {/* Image */}
         <div>
-          <div className="overflow-hidden rounded-sm border border-line bg-paper">
+          <div className="flex h-[58vh] items-center justify-center overflow-hidden rounded-sm border border-line bg-paper">
             <ArtworkImage
               artwork={a}
               sizes="(max-width: 1024px) 100vw, 520px"
-              className="max-h-[70vh] w-full"
+              fit="contain"
+              className="h-full w-full"
             />
           </div>
 
           <div className="mt-4 flex flex-wrap gap-2">
-            {a.imageDirectHiRes && (
+            {a.image.originalUrl && a.image.status !== "failed" && (
               <a
-                href={a.imageDirectHiRes}
+                href={a.image.originalUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-sm bg-oxblood px-3 py-1.5 font-sans text-xs text-ivory hover:bg-oxblood-dark"
@@ -76,9 +77,19 @@ export default async function ObjectPage({
                 Open hi-res original ↗
               </a>
             )}
-            {a.imageCommonsLookup && (
+            {a.image.commonsFilePage && (
               <a
-                href={a.imageCommonsLookup}
+                href={a.image.commonsFilePage}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="rounded-sm border border-line px-3 py-1.5 font-sans text-xs text-ink hover:border-oxblood hover:text-oxblood"
+              >
+                Commons file page ↗
+              </a>
+            )}
+            {a.image.commonsSearchUrl && !a.image.originalUrl && (
+              <a
+                href={a.image.commonsSearchUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-sm border border-line px-3 py-1.5 font-sans text-xs text-ink hover:border-oxblood hover:text-oxblood"
@@ -86,17 +97,31 @@ export default async function ObjectPage({
                 Find image on Commons ↗
               </a>
             )}
-            {a.imagePage && (
+            {a.image.sourcePageUrl && (
               <a
-                href={a.imagePage}
+                href={a.image.sourcePageUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="rounded-sm border border-line px-3 py-1.5 font-sans text-xs text-ink hover:border-oxblood hover:text-oxblood"
               >
-                Image page ↗
+                Source page ↗
               </a>
             )}
           </div>
+
+          {a.image.status === "failed" && (
+            <p className="source-note mt-3 border-l-2 border-oxblood pl-3">
+              Image source not cleared for local display. The dataset link for
+              this work points to a viewer page rather than an image file; a
+              verified image has not yet been resolved. {a.image.notes}
+            </p>
+          )}
+          {a.image.attribution && (
+            <p className="source-note mt-3">
+              {a.image.attribution}
+              {a.image.license ? ` · ${a.image.license}` : ""}
+            </p>
+          )}
         </div>
 
         {/* Catalogue record */}

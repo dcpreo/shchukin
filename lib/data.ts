@@ -3,6 +3,11 @@ import fs from "node:fs";
 import path from "node:path";
 import { parseCsvObjects } from "./csv";
 import { artworkSlugBase, uniqueSlugs } from "./slug";
+import {
+  classifyArtworkImage,
+  type EnrichedArtwork,
+  type ImageMeta
+} from "./image";
 import type { Artwork, CollectionStatsData, Entity } from "./types";
 
 /**
@@ -23,14 +28,35 @@ function readFile(name: string): string {
 // Artworks (Sergei Shchukin inventory — 259 objects)
 // ---------------------------------------------------------------------------
 
-let _artworks: Artwork[] | null = null;
+let _artworks: EnrichedArtwork[] | null = null;
 
-export function getAllArtworks(): Artwork[] {
+/**
+ * Optional enrichment file produced by the /scripts image pipeline. When
+ * present, its per-slug image metadata (Commons license, dimensions, local
+ * cache path, validation status) overrides the deterministic classifier.
+ */
+function loadEnrichment(): Map<string, Partial<ImageMeta>> {
+  const map = new Map<string, Partial<ImageMeta>>();
+  try {
+    const json = JSON.parse(readFile("artworks.enriched.json")) as {
+      artworks?: { slug: string; image?: Partial<ImageMeta> }[];
+    };
+    for (const a of json.artworks ?? []) {
+      if (a.slug && a.image) map.set(a.slug, a.image);
+    }
+  } catch {
+    // No enrichment file yet — classifier output is used as-is.
+  }
+  return map;
+}
+
+export function getAllArtworks(): EnrichedArtwork[] {
   if (_artworks) return _artworks;
 
   const raw = parseCsvObjects(readFile("shchukin_full_inventory.csv"));
 
-  const base = raw.map((r) => ({
+  const base: Artwork[] = raw.map((r) => ({
+    slug: "",
     artist: r["Artist"] ?? "",
     titleEN: r["Title (EN)"] ?? "",
     titleRU: r["Title (RU)"] ?? "",
@@ -49,25 +75,56 @@ export function getAllArtworks(): Artwork[] {
     artworkSlugBase(r.artist, r.titleEN, r.date)
   );
 
-  _artworks = base.map((r, i) => ({ slug: slugs[i], ...r }));
+  const enrichment = loadEnrichment();
+
+  _artworks = base.map((r, i) => {
+    const slug = slugs[i];
+    const classified = classifyArtworkImage(r);
+    const override = enrichment.get(slug);
+    const image: ImageMeta = override ? { ...classified, ...override } : classified;
+    return { ...r, slug, image };
+  });
   return _artworks;
 }
 
-export function getArtworkBySlug(slug: string): Artwork | undefined {
+export function getArtworkBySlug(slug: string): EnrichedArtwork | undefined {
   return getAllArtworks().find((a) => a.slug === slug);
 }
 
-/** Works that carry an image link of any kind, direct first. */
-export function getArtworksWithImages(): Artwork[] {
+/** Works that carry a displayable image (verified / resolved / cached). */
+export function getArtworksWithImages(): EnrichedArtwork[] {
   return getAllArtworks().filter(
-    (a) => a.imageDirectHiRes || a.imageCommonsLookup || a.imagePage
+    (a) =>
+      a.image.status === "verified" ||
+      a.image.status === "commons_resolved" ||
+      Boolean(a.image.localPath)
   );
 }
 
-/** Featured works: those with a direct hi-res URL embedded in the dataset. */
-export function getFeaturedArtworks(limit?: number): Artwork[] {
-  const featured = getAllArtworks().filter((a) => a.imageDirectHiRes.trim());
+/** Featured works: those with a genuinely displayable hi-res image. */
+export function getFeaturedArtworks(limit?: number): EnrichedArtwork[] {
+  const featured = getArtworksWithImages();
   return typeof limit === "number" ? featured.slice(0, limit) : featured;
+}
+
+/**
+ * Group every artwork by image status, for the image-archive gateway and
+ * the validation report. Order mirrors the published sections.
+ */
+export function getImageSections() {
+  const all = getAllArtworks();
+  return {
+    cachedLocal: all.filter((a) => a.image.localPath),
+    verifiedRemote: all.filter(
+      (a) => !a.image.localPath && a.image.status === "verified"
+    ),
+    commonsResolved: all.filter(
+      (a) => !a.image.localPath && a.image.status === "commons_resolved"
+    ),
+    lookupOnly: all.filter((a) => a.image.status === "lookup_only"),
+    missing: all.filter((a) => a.image.status === "missing"),
+    failed: all.filter((a) => a.image.status === "failed")
+  };
 }
 
 export function getArtists(): { name: string; count: number }[] {
@@ -111,7 +168,12 @@ export function getCollectionStats(): CollectionStatsData {
     byCategory: getCategories(),
     topArtists: getArtists().slice(0, 12),
     artistCount: getArtists().length,
-    withDirectImage: all.filter((a) => a.imageDirectHiRes).length,
+    withDirectImage: all.filter(
+      (a) =>
+        a.image.status === "verified" ||
+        a.image.status === "commons_resolved" ||
+        Boolean(a.image.localPath)
+    ).length,
     withCommonsLookup: all.filter((a) => a.imageCommonsLookup).length,
     withInventoryId: all.filter((a) => a.inventoryId).length,
     withRussianTitle: all.filter((a) => a.titleRU).length

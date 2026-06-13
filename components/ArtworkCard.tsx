@@ -13,13 +13,10 @@ export function ArtworkCard({ artwork }: { artwork: Artwork }) {
         <ArtworkImage
           artwork={artwork}
           sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 280px"
+          showBadge
+          fit="contain"
           className="h-full w-full transition-transform duration-500 group-hover:scale-[1.02]"
         />
-        {artwork.imageDirectHiRes && (
-          <span className="absolute left-2 top-2 rounded-sm bg-ivory/90 px-1.5 py-0.5 font-sans text-[0.6rem] uppercase tracking-wide text-oxblood">
-            Hi-res
-          </span>
-        )}
       </div>
       <div className="flex flex-1 flex-col p-3">
         <p className="font-sans text-xs text-muted">{artwork.artist}</p>

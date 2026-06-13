@@ -120,6 +120,54 @@ The archive **never downloads or re-hosts** artwork images.
 An image-rights notice appears on every object page and on `/images`. Remote
 hosts are restricted in `next.config.mjs`.
 
+### How images are classified
+
+Image state is normalised by `lib/image.ts` (`classifyArtworkImage`) into a
+single `ImageMeta` object with a `status`:
+
+| status | meaning | UI |
+|---|---|---|
+| `verified` | dataset link is a genuine image file (Commons `Special:FilePath`) | shown + HI-RES badge |
+| `commons_resolved` | matched to a Commons file by the resolver under strict rules | shown |
+| `lookup_only` | only a Commons search / source page exists | placeholder + lookup link |
+| `missing` | no reference at all | placeholder |
+| `failed` | a claimed image link is **not** a usable image file — needs review | placeholder + source link, listed under "Needs review" |
+
+**Root cause of the original blank HI-RES cards:** the CSV placed 15
+NeWestMuseum *viewer pages* (`/full/index.php?id=…`, which return HTML) in the
+`Image (direct hi-res)` column. An `<img>` pointed at an HTML page fails and the
+browser renders the alt text inside the box — the "Henri Matisse — Dance, 1910"
+overlap. These are now classified `failed` and moved out of the verified
+sections; the frontend also has an `onError` fallback so a load failure can
+never leave a HI-RES badge over a blank box.
+
+### Image pipeline (scripts)
+
+Build/refresh image data with the scripts in `/scripts`:
+
+```bash
+npm run data:enrich       # offline: (re)build data/artworks.enriched.json from the CSV
+npm run images:resolve    # query Wikimedia Commons API, accept strict matches
+npm run images:cache      # download rights-cleared images → public/images/collection (needs sharp)
+npm run images:validate   # HEAD/GET every image URL → reports/image-validation-report.{md,json}
+npm run images:build      # resolve → cache → validate
+```
+
+> **Network note:** `images:resolve`, `images:cache` and `images:validate`
+> require outbound access to `commons.wikimedia.org` / `upload.wikimedia.org`.
+> They must be run in an environment whose egress policy allows those hosts
+> (e.g. your machine or CI) — not from a locked-down sandbox. The offline
+> `data:enrich` step runs anywhere and is wired into `prebuild`, so the site
+> always builds with a valid enriched dataset.
+
+**Matching is conservative (accuracy beats completeness):** a Commons file is
+auto-attached only when the artist matches **and** a corroborating signal
+(title, inventory number, museum + Shchukin mention, or relevant Commons
+category) agrees. Uncertain matches go to `data/image-candidates.json` for
+manual review and are never shown as the artwork's image. Local caching only
+happens for public-domain / openly-licensed files; anything unclear is left as
+a source link.
+
 ---
 
 ## How to add new inventory

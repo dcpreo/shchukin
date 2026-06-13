@@ -5,10 +5,16 @@
   "description": "Shchukin Foundation / Shchukin Collection Archive — a provenance-sensitive scholarly archive and searchable collection index.",
   "scripts": {
     "dev": "next dev",
+    "prebuild": "tsx scripts/build-enriched.ts",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "data:enrich": "tsx scripts/build-enriched.ts",
+    "images:resolve": "tsx scripts/resolve-commons-images.ts",
+    "images:cache": "tsx scripts/cache-commons-images.ts",
+    "images:validate": "tsx scripts/validate-images.ts",
+    "images:build": "npm run images:resolve && npm run images:cache && npm run images:validate"
   },
   "dependencies": {
     "marked": "^14.1.4",
@@ -28,6 +34,10 @@
     "eslint-config-next": "^15.5.19",
     "postcss": "^8.4.49",
     "tailwindcss": "^3.4.17",
+    "tsx": "^4.19.2",
     "typescript": "^5.7.3"
+  },
+  "optionalDependencies": {
+    "sharp": "^0.33.5"
   }
 }
