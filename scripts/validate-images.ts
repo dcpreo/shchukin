@@ -36,6 +36,8 @@ interface CheckResult {
   reason: string | null;
 }
 
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 async function head(url: string): Promise<Response | null> {
   try {
     return await fetch(url, { method: "HEAD", headers: { "User-Agent": UA } });
@@ -48,23 +50,17 @@ async function getRange(url: string): Promise<Response | null> {
   try {
     return await fetch(url, {
       method: "GET",
-      headers: { "User-Agent": UA, Range: "bytes=0-1024" }
+      headers: { "User-Agent": UA, Range: "bytes=0-2048" }
     });
   } catch {
     return null;
   }
 }
 
-async function validateUrl(url: string): Promise<Omit<CheckResult, "slug" | "artist" | "titleEN" | "status">> {
-  let res = await head(url);
-  if (!res || res.status >= 400 || res.status === 405) {
-    res = await getRange(url);
-  }
-  if (!res) {
-    return { url, ok: false, httpStatus: null, contentType: null, reason: "network error / unreachable" };
-  }
+function classify(res: Response, url: string) {
   const ct = res.headers.get("content-type");
-  const ok = res.status >= 200 && res.status < 400 && Boolean(ct && ct.startsWith("image/"));
+  const ok =
+    res.status >= 200 && res.status < 400 && Boolean(ct && ct.startsWith("image/"));
   return {
     url,
     ok,
@@ -72,6 +68,33 @@ async function validateUrl(url: string): Promise<Omit<CheckResult, "slug" | "art
     contentType: ct,
     reason: ok ? null : `status ${res.status}, content-type ${ct ?? "unknown"}`
   };
+}
+
+/**
+ * Validate a single URL with retry/backoff. HEAD first, then a ranged GET;
+ * 429/403/5xx are retried with exponential backoff so a momentary Commons
+ * rate-limit is not mistaken for a broken image.
+ */
+async function validateUrl(
+  url: string
+): Promise<Omit<CheckResult, "slug" | "artist" | "titleEN" | "status">> {
+  const backoffs = [0, 600, 1500, 3500];
+  let last: Omit<CheckResult, "slug" | "artist" | "titleEN" | "status"> | null = null;
+  for (const wait of backoffs) {
+    if (wait) await sleep(wait);
+    let res = await head(url);
+    if (!res || res.status === 405 || res.status >= 400) res = await getRange(url);
+    if (!res) {
+      last = { url, ok: false, httpStatus: null, contentType: null, reason: "network error / unreachable" };
+      continue;
+    }
+    const result = classify(res, url);
+    if (result.ok) return result;
+    last = result;
+    // Only worth retrying on throttling / transient server errors.
+    if (![403, 429, 500, 502, 503, 504].includes(res.status)) break;
+  }
+  return last ?? { url, ok: false, httpStatus: null, contentType: null, reason: "unknown" };
 }
 
 function rows(): EnrichedRow[] {
@@ -103,7 +126,7 @@ async function main(): Promise<void> {
     }
     const v = await validateUrl(url);
     results.push({ ...meta, ...v });
-    await new Promise((res) => setTimeout(res, 100));
+    await sleep(250);
   }
 
   const total = all.length;

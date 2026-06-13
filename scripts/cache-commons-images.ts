@@ -28,11 +28,54 @@ import type { ImageMeta } from "../lib/image";
 const UA = "ShchukinCollectionArchive/1.0 (image cache)";
 
 // Licenses we treat as safe to cache locally. Anything else → skip.
-const ALLOW = /public domain|pd-|cc0|cc-by(?!-nc)|cc by(?!-nc)|no known copyright|open access/i;
+const ALLOW = /public domain|pd-|pd art|cc0|cc-by(?!-nc)|cc by(?!-nc)|no known copyright|open access/i;
 
-function rightsAllowCaching(meta: ImageMeta): boolean {
-  if (!meta.license) return false;
-  return ALLOW.test(meta.license);
+function rightsAllowCaching(license: string | null): boolean {
+  if (!license) return false;
+  return ALLOW.test(license);
+}
+
+const COMMONS_API = "https://commons.wikimedia.org/w/api.php";
+
+/**
+ * Look up a Commons file's license when the enriched record lacks one. Pulls
+ * several extmetadata fields so public-domain paintings (which often expose
+ * License/UsageTerms rather than LicenseShortName) are correctly recognised.
+ */
+async function lookupCommonsLicense(
+  fileName: string
+): Promise<{ license: string | null; attribution: string | null; artist: string | null }> {
+  try {
+    const params = new URLSearchParams({
+      format: "json",
+      action: "query",
+      titles: `File:${fileName}`,
+      prop: "imageinfo",
+      iiprop: "extmetadata"
+    });
+    const res = await fetch(`${COMMONS_API}?${params}`, {
+      headers: { "User-Agent": UA }
+    });
+    if (!res.ok) return { license: null, attribution: null, artist: null };
+    const data: any = await res.json();
+    const pages = data?.query?.pages ?? {};
+    const page: any = Object.values(pages)[0];
+    const ext = page?.imageinfo?.[0]?.extmetadata ?? {};
+    const strip = (s: any) =>
+      s?.value ? String(s.value).replace(/<[^>]+>/g, "").trim() : null;
+    const license =
+      strip(ext.LicenseShortName) ||
+      strip(ext.License) ||
+      strip(ext.UsageTerms) ||
+      null;
+    return {
+      license,
+      attribution: strip(ext.Attribution) || strip(ext.Credit),
+      artist: strip(ext.Artist)
+    };
+  } catch {
+    return { license: null, attribution: null, artist: null };
+  }
 }
 
 async function loadSharp(): Promise<any | null> {
@@ -79,7 +122,21 @@ async function main(): Promise<void> {
     const meta = r.image;
     const src = meta.originalUrl;
     if (!src) continue;
-    if (!rightsAllowCaching(meta)) continue; // rights unclear → do not cache
+
+    // Recover a missing license straight from Commons so public-domain
+    // paintings (whose LicenseShortName was absent at resolve time) can be
+    // cached. Rights that stay unclear are still skipped.
+    let license = meta.license;
+    let attribution = meta.attribution;
+    let artistCredit = meta.artistCredit;
+    if (!rightsAllowCaching(license) && meta.commonsFileName) {
+      const looked = await lookupCommonsLicense(meta.commonsFileName);
+      license = looked.license ?? license;
+      attribution = looked.attribution ?? attribution;
+      artistCredit = looked.artist ?? artistCredit;
+      await new Promise((res) => setTimeout(res, 120));
+    }
+    if (!rightsAllowCaching(license)) continue; // rights unclear → do not cache
 
     const buf = await download(src);
     if (!buf) continue;
@@ -109,6 +166,9 @@ async function main(): Promise<void> {
       updated.set(r.slug, {
         ...meta,
         localPath: localCard,
+        license,
+        attribution,
+        artistCredit,
         width: meta0.width ?? meta.width,
         height: meta0.height ?? meta.height,
         verifiedAt: nowIso()
@@ -119,8 +179,8 @@ async function main(): Promise<void> {
         card: localCard,
         detail: localDetail,
         originalUrl: src,
-        license: meta.license,
-        attribution: meta.attribution,
+        license,
+        attribution,
         commonsFilePage: meta.commonsFilePage,
         cachedAt: nowIso()
       };
