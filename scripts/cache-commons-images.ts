@@ -23,7 +23,11 @@ import {
   nowIso,
   type EnrichedRow
 } from "./shared";
-import type { ImageMeta } from "../lib/image";
+import {
+  commonsThumbUrl,
+  normalizeCommonsFilePath,
+  type ImageMeta
+} from "../lib/image";
 
 const UA = "ShchukinCollectionArchive/1.0 (image cache)";
 
@@ -88,16 +92,41 @@ async function loadSharp(): Promise<any | null> {
   }
 }
 
+const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
+
 async function download(url: string): Promise<Buffer | null> {
-  try {
-    const res = await fetch(url, { headers: { "User-Agent": UA } });
-    if (!res.ok) return null;
-    const ct = res.headers.get("content-type") || "";
-    if (!ct.startsWith("image/")) return null;
-    return Buffer.from(await res.arrayBuffer());
-  } catch {
-    return null;
+  // Retry/backoff: Commons throttles bursts; a transient 429/5xx is not fatal.
+  const backoffs = [0, 800, 2000, 4000];
+  for (const wait of backoffs) {
+    if (wait) await sleep(wait);
+    try {
+      const res = await fetch(url, { headers: { "User-Agent": UA } });
+      if (res.ok) {
+        const ct = res.headers.get("content-type") || "";
+        if (!ct.startsWith("image/")) return null;
+        return Buffer.from(await res.arrayBuffer());
+      }
+      if (![403, 429, 500, 502, 503, 504].includes(res.status)) return null;
+    } catch {
+      // network blip — fall through to retry
+    }
   }
+  return null;
+}
+
+/**
+ * The URL to fetch for caching. We download a sized thumbnail (≤2400px) from
+ * Commons rather than the full original — typically a few hundred KB instead
+ * of tens of MB, which is both faster and far less likely to be throttled.
+ */
+function cacheSourceUrl(meta: ImageMeta): string | null {
+  if (meta.commonsFileName && meta.commonsFilePage) {
+    return commonsThumbUrl(meta.commonsFilePage, 2400);
+  }
+  if (meta.originalUrl && /commons\.wikimedia\.org|upload\.wikimedia\.org/.test(meta.originalUrl)) {
+    return commonsThumbUrl(normalizeCommonsFilePath(meta.originalUrl), 2400);
+  }
+  return meta.originalUrl;
 }
 
 async function main(): Promise<void> {
@@ -120,7 +149,8 @@ async function main(): Promise<void> {
 
   for (const r of rows) {
     const meta = r.image;
-    const src = meta.originalUrl;
+    if (!meta.originalUrl) continue;
+    const src = cacheSourceUrl(meta);
     if (!src) continue;
 
     // Recover a missing license straight from Commons so public-domain
@@ -134,12 +164,16 @@ async function main(): Promise<void> {
       license = looked.license ?? license;
       attribution = looked.attribution ?? attribution;
       artistCredit = looked.artist ?? artistCredit;
-      await new Promise((res) => setTimeout(res, 120));
+      await sleep(120);
     }
     if (!rightsAllowCaching(license)) continue; // rights unclear → do not cache
 
     const buf = await download(src);
-    if (!buf) continue;
+    if (!buf) {
+      console.warn(`download failed (skipped): ${r.slug}`);
+      continue;
+    }
+    await sleep(150);
 
     try {
       const img = sharp(buf, { failOn: "none" });
