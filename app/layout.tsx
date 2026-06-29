@@ -16,7 +16,7 @@ const sans = Archivo({
   variable: "--font-sans"
 });
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://shchukin-archive.org";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://shchukin.org";
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),

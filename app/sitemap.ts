@@ -1,8 +1,11 @@
 import type { MetadataRoute } from "next";
 import { getAllArtworks } from "@/lib/data";
 
+// Required for `output: export` — emit sitemap.xml as a static file.
+export const dynamic = "force-static";
+
 const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL || "https://shchukin-archive.org";
+  process.env.NEXT_PUBLIC_SITE_URL || "https://shchukin.org";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const now = new Date();

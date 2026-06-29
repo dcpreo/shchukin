@@ -19,6 +19,7 @@
   "dependencies": {
     "marked": "^14.1.4",
     "next": "^15.5.19",
+    "photoswipe": "^5.4.4",
     "react": "19.0.0",
     "react-dom": "19.0.0",
     "server-only": "^0.0.1"
