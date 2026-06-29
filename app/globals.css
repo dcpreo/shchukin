@@ -1,0 +1,115 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ivory text-ink font-serif antialiased;
+    font-feature-settings: "kern", "liga", "onum";
+  }
+
+  ::selection {
+    @apply bg-oxblood text-ivory;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-serif text-ink;
+    text-wrap: balance;
+  }
+}
+
+@layer components {
+  /* Museum-label typography: small, spaced, uppercase */
+  .label {
+    @apply font-sans text-[0.7rem] uppercase tracking-label text-muted;
+  }
+
+  .label-accent {
+    @apply font-sans text-[0.7rem] uppercase tracking-label text-oxblood;
+  }
+
+  /* Catalogue number motif */
+  .cat-no {
+    @apply font-sans text-xs tabular-nums text-brass;
+  }
+
+  /* Quiet horizontal divider used between archive sections */
+  .rule {
+    @apply border-0 border-t border-line;
+  }
+
+  .container-archive {
+    @apply mx-auto w-full max-w-archive px-5 sm:px-8;
+  }
+
+  .prose-archive {
+    @apply max-w-prose font-serif text-[1.02rem] leading-relaxed text-ink/90;
+  }
+
+  .prose-archive p {
+    @apply mb-4;
+  }
+
+  .link-underline {
+    @apply underline decoration-line decoration-1 underline-offset-4 transition-colors hover:decoration-oxblood;
+  }
+
+  /* Footnote-style source area */
+  .source-note {
+    @apply font-sans text-xs leading-relaxed text-muted;
+  }
+}
+
+/* Rich-text rendering for MDX archive documents */
+.mdx-content {
+  @apply font-serif text-ink/90;
+}
+.mdx-content h1 {
+  @apply mb-3 mt-0 text-3xl font-medium;
+}
+.mdx-content h2 {
+  @apply mb-3 mt-10 border-t border-line pt-6 text-2xl font-medium;
+}
+.mdx-content h3 {
+  @apply mb-2 mt-6 text-lg font-semibold;
+}
+.mdx-content p {
+  @apply mb-4 leading-relaxed;
+}
+.mdx-content ul {
+  @apply mb-4 list-disc space-y-1 pl-5;
+}
+.mdx-content ol {
+  @apply mb-4 list-decimal space-y-1 pl-5;
+}
+.mdx-content a {
+  @apply text-oxblood underline decoration-line underline-offset-4 hover:decoration-oxblood;
+}
+.mdx-content blockquote {
+  @apply my-4 border-l-2 border-oxblood pl-4 italic text-muted;
+}
+.mdx-content code {
+  @apply rounded bg-line/50 px-1 py-0.5 font-sans text-[0.85em];
+}
+.mdx-content table {
+  @apply my-5 w-full border-collapse text-sm;
+}
+.mdx-content th {
+  @apply border-b border-ink/30 px-3 py-2 text-left font-sans text-xs uppercase tracking-wide;
+}
+.mdx-content td {
+  @apply border-b border-line px-3 py-2 align-top;
+}
+.mdx-content hr {
+  @apply my-8 border-line;
+}
+.mdx-content strong {
+  @apply font-semibold text-ink;
+}
