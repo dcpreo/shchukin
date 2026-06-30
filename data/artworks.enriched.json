@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-29T19:10:11.085Z",
+  "generated": "2026-06-30T04:33:56.679Z",
   "count": 259,
   "artworks": [
     {
@@ -57,9 +57,9 @@
         "license": "Public domain",
         "artistCredit": "Claude Monet",
         "attribution": "repro from artbook, original at Hermitage St.Petersburg",
-        "width": 3840,
-        "height": 3072,
-        "verifiedAt": "2026-06-13T22:13:20.785Z",
+        "width": 8748,
+        "height": 6999,
+        "verifiedAt": "2026-06-30T03:26:47.657Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -90,7 +90,7 @@
         "attribution": "Own work",
         "width": 3164,
         "height": 2436,
-        "verifiedAt": "2026-06-13T22:13:21.912Z",
+        "verifiedAt": "2026-06-30T03:26:50.155Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -152,7 +152,7 @@
         "attribution": "Own work",
         "width": 2936,
         "height": 2360,
-        "verifiedAt": "2026-06-13T22:13:31.075Z",
+        "verifiedAt": "2026-06-30T03:26:54.728Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -181,9 +181,9 @@
         "license": "Public domain",
         "artistCredit": "Claude Monet",
         "attribution": "Hermitage Museum",
-        "width": 3840,
-        "height": 2843,
-        "verifiedAt": "2026-06-13T22:13:40.090Z",
+        "width": 6484,
+        "height": 4800,
+        "verifiedAt": "2026-06-30T03:26:57.098Z",
         "confidence": "high",
         "notes": "Resolved from Commons (5 matching signals)."
       }
@@ -214,7 +214,7 @@
         "attribution": "Own work",
         "width": 2328,
         "height": 2640,
-        "verifiedAt": "2026-06-13T22:52:52.552Z",
+        "verifiedAt": "2026-06-30T03:27:00.847Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -245,7 +245,7 @@
         "attribution": "Own work",
         "width": 1740,
         "height": 2664,
-        "verifiedAt": "2026-06-13T22:52:54.619Z",
+        "verifiedAt": "2026-06-30T03:27:02.849Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -274,9 +274,9 @@
         "license": "Public domain",
         "artistCredit": "Claude Monet",
         "attribution": "Pushkin Museum, Moskow",
-        "width": 3840,
-        "height": 6242,
-        "verifiedAt": "2026-06-13T22:53:04.944Z",
+        "width": 6412,
+        "height": 10423,
+        "verifiedAt": "2026-06-30T03:27:05.228Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -338,7 +338,7 @@
         "attribution": "Own work",
         "width": 2456,
         "height": 2372,
-        "verifiedAt": "2026-06-13T22:53:07.313Z",
+        "verifiedAt": "2026-06-30T03:27:09.490Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -367,9 +367,9 @@
         "license": "Public domain",
         "artistCredit": "Claude Monet",
         "attribution": "The Museum of Modern Western Art (NWM), GMNZI: 370",
-        "width": 3840,
-        "height": 3085,
-        "verifiedAt": "2026-06-13T22:53:10.429Z",
+        "width": 10000,
+        "height": 8034,
+        "verifiedAt": "2026-06-30T03:27:11.444Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -400,7 +400,7 @@
         "attribution": "Own work",
         "width": 2548,
         "height": 2216,
-        "verifiedAt": "2026-06-13T22:53:18.243Z",
+        "verifiedAt": "2026-06-30T03:27:13.121Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -429,9 +429,9 @@
         "license": "Public domain",
         "artistCredit": "Pierre-Auguste Renoir",
         "attribution": "2wE1mqTuUoBmtA at Google Cultural Institute maximum zoom level",
-        "width": 3840,
-        "height": 2632,
-        "verifiedAt": "2026-06-13T22:53:53.889Z",
+        "width": 6725,
+        "height": 4609,
+        "verifiedAt": "2026-06-30T03:27:16.421Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -493,7 +493,7 @@
         "attribution": "http://www.arts-museum.ru/data/fonds/europe_and_america/j/2001_3000/6109_Devushki_v_chernom/index.php",
         "width": 478,
         "height": 593,
-        "verifiedAt": "2026-06-13T22:14:39.985Z",
+        "verifiedAt": "2026-06-30T03:27:19.888Z",
         "confidence": "high",
         "notes": "Resolved from Commons (5 matching signals)."
       }
@@ -524,7 +524,7 @@
         "attribution": "Own work",
         "width": 2760,
         "height": 2140,
-        "verifiedAt": "2026-06-13T22:54:37.002Z",
+        "verifiedAt": "2026-06-30T03:27:22.662Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -576,7 +576,7 @@
         "source": "wikimedia_commons",
         "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Edage_Degas_-_Woman_Combing_her_Hair_-_Hermitage_%D0%9E%D0%A0-42154.jpg",
         "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Edage_Degas_-_Woman_Combing_her_Hair_-_Hermitage_%D0%9E%D0%A0-42154.jpg?width=1000",
-        "localPath": null,
+        "localPath": "/images/collection/edgar-degas-woman-combing-her-hair-1884-1200.webp",
         "sourcePageUrl": null,
         "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Edage_Degas_-_Woman_Combing_her_Hair_-_Hermitage_%D0%9E%D0%A0-42154.jpg",
         "commonsFileName": "Edage Degas - Woman Combing her Hair - Hermitage ОР-42154.jpg",
@@ -586,7 +586,7 @@
         "attribution": "Hermitage info Hermitage image",
         "width": 1874,
         "height": 1920,
-        "verifiedAt": "2026-06-13T20:57:55.795Z",
+        "verifiedAt": "2026-06-30T03:37:18.601Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -638,7 +638,7 @@
         "source": "wikimedia_commons",
         "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Edgar_Germain_Hilaire_Degas_076.jpg",
         "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Edgar_Germain_Hilaire_Degas_076.jpg?width=1000",
-        "localPath": null,
+        "localPath": "/images/collection/edgar-degas-blue-dancers-c-1898-1200.webp",
         "sourcePageUrl": null,
         "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Edgar_Germain_Hilaire_Degas_076.jpg",
         "commonsFileName": "Edgar Germain Hilaire Degas 076.jpg",
@@ -648,7 +648,7 @@
         "attribution": "Own work",
         "width": 2000,
         "height": 1966,
-        "verifiedAt": "2026-06-13T20:57:58.010Z",
+        "verifiedAt": "2026-06-30T03:37:21.069Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -669,7 +669,7 @@
         "source": "wikimedia_commons",
         "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pissarro%2C_Camille_-_Place_du_Theatre-Francais._Spring.jpg",
         "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Pissarro%2C_Camille_-_Place_du_Theatre-Francais._Spring.jpg?width=1000",
-        "localPath": null,
+        "localPath": "/images/collection/camille-pissarro-place-du-theatre-francais-in-paris-1898-1200.webp",
         "sourcePageUrl": null,
         "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Pissarro%2C_Camille_-_Place_du_Theatre-Francais._Spring.jpg",
         "commonsFileName": "Pissarro, Camille - Place du Theatre-Francais. Spring.jpg",
@@ -679,7 +679,7 @@
         "attribution": "Hermitage Torrent (.torrent with info-hash)",
         "width": 1266,
         "height": 1008,
-        "verifiedAt": "2026-06-13T20:58:00.676Z",
+        "verifiedAt": "2026-06-30T03:37:28.663Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -789,23 +789,23 @@
       "inventoryId": "",
       "category": "painting",
       "image": {
-        "status": "lookup_only",
+        "status": "commons_resolved",
         "source": "wikimedia_commons",
-        "originalUrl": null,
-        "thumbnailUrl": null,
-        "localPath": null,
+        "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cezanne_-_Blumenstrau%C3%9F_in_blauer_Vase.jpg",
+        "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Cezanne_-_Blumenstrau%C3%9F_in_blauer_Vase.jpg?width=1000",
+        "localPath": "/images/collection/paul-cezanne-bouquet-of-flowers-in-a-vase-c-1877-1200.webp",
         "sourcePageUrl": null,
-        "commonsFilePage": null,
-        "commonsFileName": null,
+        "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Cezanne_-_Blumenstrau%C3%9F_in_blauer_Vase.jpg",
+        "commonsFileName": "Cezanne - Blumenstrauß in blauer Vase.jpg",
         "commonsSearchUrl": "https://commons.wikimedia.org/w/index.php?search=Paul+C%C3%A9zanne+Bouquet+of+Flowers+in+a+Vase&title=Special%3AMediaSearch&type=image",
-        "license": null,
-        "artistCredit": null,
-        "attribution": null,
-        "width": null,
-        "height": null,
-        "verifiedAt": null,
-        "confidence": "low",
-        "notes": "No direct image; a Commons lookup is available."
+        "license": "Public domain",
+        "artistCredit": "Paul Cézanne",
+        "attribution": "Copied from an art book",
+        "width": 1275,
+        "height": 1711,
+        "verifiedAt": "2026-06-30T03:37:36.604Z",
+        "confidence": "high",
+        "notes": "Resolved from Commons (4 matching signals)."
       }
     },
     {
@@ -927,7 +927,7 @@
         "attribution": "Own work",
         "width": 2236,
         "height": 2788,
-        "verifiedAt": "2026-06-13T20:58:13.739Z",
+        "verifiedAt": "2026-06-30T03:27:51.417Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -989,7 +989,7 @@
         "attribution": "Own work",
         "width": 2804,
         "height": 2300,
-        "verifiedAt": "2026-06-13T20:58:17.873Z",
+        "verifiedAt": "2026-06-30T03:27:57.566Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -1020,7 +1020,7 @@
         "attribution": "1. The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN: 3936122202. 2. Arthermitage3. The Hermitage, St. Petersburg",
         "width": 3731,
         "height": 2927,
-        "verifiedAt": "2026-06-13T20:58:20.179Z",
+        "verifiedAt": "2026-06-30T03:28:00.426Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -1049,9 +1049,9 @@
         "license": "Public domain",
         "artistCredit": "Vincent van Gogh",
         "attribution": "Hermitage Torrent",
-        "width": 3840,
-        "height": 3014,
-        "verifiedAt": "2026-06-13T22:15:39.270Z",
+        "width": 5098,
+        "height": 4001,
+        "verifiedAt": "2026-06-30T03:28:02.830Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -1082,7 +1082,7 @@
         "attribution": "1. The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN: 3936122202. 2. Own work",
         "width": 1662,
         "height": 2000,
-        "verifiedAt": "2026-06-13T20:58:28.747Z",
+        "verifiedAt": "2026-06-30T03:28:09.827Z",
         "confidence": "medium",
         "notes": "Resolved from Commons (2 matching signals)."
       }
@@ -1111,9 +1111,9 @@
         "license": "Public domain",
         "artistCredit": "Vincent van Gogh",
         "attribution": "Hermitage Torrent (.torrent with info-hash)",
-        "width": 3840,
-        "height": 3017,
-        "verifiedAt": "2026-06-13T22:15:48.699Z",
+        "width": 7560,
+        "height": 5939,
+        "verifiedAt": "2026-06-30T03:28:13.532Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -1144,7 +1144,7 @@
         "attribution": "The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN: 3936122202.",
         "width": 1280,
         "height": 833,
-        "verifiedAt": "2026-06-13T22:15:49.326Z",
+        "verifiedAt": "2026-06-30T03:28:18.178Z",
         "confidence": "high",
         "notes": "Resolved from Commons (5 matching signals)."
       }
@@ -1175,7 +1175,7 @@
         "attribution": "Own work",
         "width": 2165,
         "height": 2561,
-        "verifiedAt": "2026-06-13T20:58:37.003Z",
+        "verifiedAt": "2026-06-30T03:28:21.174Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -1206,7 +1206,7 @@
         "attribution": "1. The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN: 3936122202. 2. arthermitage.org3. The Hermitage, St. Petersburg",
         "width": 3721,
         "height": 2782,
-        "verifiedAt": "2026-06-13T20:58:39.052Z",
+        "verifiedAt": "2026-06-30T03:28:24.260Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -1237,7 +1237,7 @@
         "attribution": "The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN: 3936122202.",
         "width": 3176,
         "height": 2335,
-        "verifiedAt": "2026-06-13T20:58:41.708Z",
+        "verifiedAt": "2026-06-30T03:28:30.032Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -1330,7 +1330,7 @@
         "attribution": "1. pintura.aut.org2. 1000museums",
         "width": 2000,
         "height": 1495,
-        "verifiedAt": "2026-06-13T20:58:50.701Z",
+        "verifiedAt": "2026-06-30T03:28:40.727Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -1392,7 +1392,7 @@
         "attribution": "State Hermitage Museum (old page)",
         "width": 803,
         "height": 575,
-        "verifiedAt": "2026-06-13T22:16:20.044Z",
+        "verifiedAt": "2026-06-30T03:28:46.869Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -1423,7 +1423,7 @@
         "attribution": "1. Hermitage (old page)2. The Hermitage, St. Petersburg",
         "width": 1521,
         "height": 1920,
-        "verifiedAt": "2026-06-13T20:58:56.286Z",
+        "verifiedAt": "2026-06-30T03:28:49.750Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -1454,7 +1454,7 @@
         "attribution": "1. Hermitage (old page)2. The Hermitage, St. Petersburg",
         "width": 1919,
         "height": 1517,
-        "verifiedAt": "2026-06-13T20:58:58.272Z",
+        "verifiedAt": "2026-06-30T03:28:51.468Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -1516,7 +1516,7 @@
         "attribution": "https://pushkinmuseum.art/data/fonds/europe_and_america/j/2001_3000/zh_3263/index.php?lang=ru",
         "width": 1280,
         "height": 1642,
-        "verifiedAt": "2026-06-13T22:16:36.296Z",
+        "verifiedAt": "2026-06-30T03:28:55.408Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -1547,7 +1547,7 @@
         "attribution": "The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN: 3936122202.",
         "width": 2536,
         "height": 3338,
-        "verifiedAt": "2026-06-13T20:59:05.106Z",
+        "verifiedAt": "2026-06-30T03:29:01.179Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -1578,7 +1578,7 @@
         "attribution": "Hermitage Torrent (.torrent with info-hash)",
         "width": 3344,
         "height": 4352,
-        "verifiedAt": "2026-06-13T20:59:06.797Z",
+        "verifiedAt": "2026-06-30T03:29:04.079Z",
         "confidence": "high",
         "notes": "Resolved from Commons (5 matching signals)."
       }
@@ -1607,9 +1607,9 @@
         "license": "Public domain",
         "artistCredit": "Paul Gauguin",
         "attribution": "1. The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN: 3936122202. 2. Hermitage Torrent (.torrent with info-hash)",
-        "width": 3840,
-        "height": 3018,
-        "verifiedAt": "2026-06-13T22:16:53.735Z",
+        "width": 4157,
+        "height": 3267,
+        "verifiedAt": "2026-06-30T03:29:08.896Z",
         "confidence": "high",
         "notes": "Resolved from Commons (5 matching signals)."
       }
@@ -1638,9 +1638,9 @@
         "license": "Public domain",
         "artistCredit": "Paul Gauguin",
         "attribution": "Pushkin Museum, Moskow",
-        "width": 3840,
-        "height": 3052,
-        "verifiedAt": "2026-06-13T22:16:56.434Z",
+        "width": 10826,
+        "height": 8604,
+        "verifiedAt": "2026-06-30T03:29:11.016Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -1671,7 +1671,7 @@
         "attribution": "State Hermitage Museum, Saint Petersburg, Russia",
         "width": 1240,
         "height": 1476,
-        "verifiedAt": "2026-06-13T20:59:14.172Z",
+        "verifiedAt": "2026-06-30T03:29:14.536Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -1702,7 +1702,7 @@
         "attribution": "State Hermitage Museum, Saint Petersburg, Russia",
         "width": 1476,
         "height": 1065,
-        "verifiedAt": "2026-06-13T20:59:16.605Z",
+        "verifiedAt": "2026-06-30T03:29:16.911Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -1795,7 +1795,7 @@
         "attribution": "State Hermitage Museum , Saint Petersburg, Russia",
         "width": 707,
         "height": 575,
-        "verifiedAt": "2026-06-13T22:17:12.022Z",
+        "verifiedAt": "2026-06-30T03:29:23.090Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -1855,9 +1855,9 @@
         "license": "CC BY-SA 2.0",
         "artistCredit": "Damien",
         "attribution": "st_petersburg_2018_hermitage_general_staff_matisse_still_life_vase_bottle_fruit",
-        "width": 3840,
-        "height": 2880,
-        "verifiedAt": "2026-06-13T22:17:13.781Z",
+        "width": 4320,
+        "height": 3240,
+        "verifiedAt": "2026-06-30T03:29:27.533Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -1888,7 +1888,7 @@
         "attribution": "https://archive.org/details/toutloeuvrepeint0000unse",
         "width": 346,
         "height": 282,
-        "verifiedAt": "2026-06-13T22:17:14.091Z",
+        "verifiedAt": "2026-06-30T03:29:29.155Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -1950,7 +1950,7 @@
         "attribution": "https://www.flickr.com/photos/gandalfsgallery/4811188791/in/photolist-8k9ANT-nbqsKS-dvRipm-ekrKjW-oyy929-oyxWxr-nvWdfP-ekkZ8p-8kFEu4-9whTTW-jFbB8n-oR1TVA-9Ei3uW-oQLXzX-drnC79-8kqSvx-8ku4Vm-dfjrVL-oR2Ach-hrr3yd-9xBGuM-9edCM9-9n3UV7-4yvZri-9eekqS-dfbrGY-dfjsjJ-TpEtqf-hrrLN2-nvVDRU-hsDGaN-oZC3XL-nN7WMR-df2eXS-bCP9sZ-cMCiLw-jFu1KM-4yAip9-driSvU-8mbdLZ-4yAgyC-UtQXqC-ojsSFM-8UeekL-ojuWeV-aM5y9B-Sgcx15-aLHyAM-ojuzjt-sjoDCk",
         "width": 1468,
         "height": 1208,
-        "verifiedAt": "2026-06-13T20:59:34.042Z",
+        "verifiedAt": "2026-06-30T03:29:33.271Z",
         "confidence": "medium",
         "notes": "Resolved from Commons (2 matching signals)."
       }
@@ -1981,7 +1981,7 @@
         "attribution": "State Hermitage Museum, Saint Petersburg, Russia",
         "width": 743,
         "height": 575,
-        "verifiedAt": "2026-06-13T22:17:21.995Z",
+        "verifiedAt": "2026-06-30T03:29:36.266Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -2012,7 +2012,7 @@
         "attribution": "Own work",
         "width": 674,
         "height": 532,
-        "verifiedAt": "2026-06-13T22:17:22.392Z",
+        "verifiedAt": "2026-06-30T03:29:38.209Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -2043,7 +2043,7 @@
         "attribution": "Pushkin Museum",
         "width": 1586,
         "height": 1347,
-        "verifiedAt": "2026-06-13T20:59:41.039Z",
+        "verifiedAt": "2026-06-30T03:29:40.591Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -2074,7 +2074,7 @@
         "attribution": "https://archive.org/details/toutloeuvrepeint0000unse",
         "width": 154,
         "height": 236,
-        "verifiedAt": "2026-06-13T22:17:30.274Z",
+        "verifiedAt": "2026-06-30T03:29:42.851Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -2136,7 +2136,7 @@
         "attribution": "The Pushkin Museum",
         "width": 547,
         "height": 692,
-        "verifiedAt": "2026-06-13T22:17:30.740Z",
+        "verifiedAt": "2026-06-30T03:29:46.875Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -2229,7 +2229,7 @@
         "attribution": "https://www.artchive.com/wp-content/uploads/2023/04/Still-Life-with-Blue-Tablecloth-Matisse-Henri-1909-2.jpg",
         "width": 1919,
         "height": 1438,
-        "verifiedAt": "2026-06-13T20:59:52.895Z",
+        "verifiedAt": "2026-06-30T03:29:52.194Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -2260,7 +2260,7 @@
         "attribution": "https://archive.org/details/toutloeuvrepeint0000unse",
         "width": 183,
         "height": 242,
-        "verifiedAt": "2026-06-13T22:17:38.649Z",
+        "verifiedAt": "2026-06-30T03:29:54.762Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -2291,7 +2291,7 @@
         "attribution": "Own work",
         "width": 2047,
         "height": 1650,
-        "verifiedAt": "2026-06-13T20:59:57.461Z",
+        "verifiedAt": "2026-06-30T03:29:57.386Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -2322,7 +2322,7 @@
         "attribution": "Own work",
         "width": 2188,
         "height": 1689,
-        "verifiedAt": "2026-06-13T20:59:59.519Z",
+        "verifiedAt": "2026-06-30T03:29:59.469Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -2353,7 +2353,7 @@
         "attribution": "https://archive.org/details/toutloeuvrepeint0000unse",
         "width": 318,
         "height": 236,
-        "verifiedAt": "2026-06-13T22:17:54.341Z",
+        "verifiedAt": "2026-06-30T03:30:01.116Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -2384,7 +2384,7 @@
         "attribution": "Hermitage Museum",
         "width": 1107,
         "height": 846,
-        "verifiedAt": "2026-06-13T22:17:55.280Z",
+        "verifiedAt": "2026-06-30T03:30:03.460Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -2413,9 +2413,9 @@
         "license": "CC BY-SA 2.0",
         "artistCredit": "Damien",
         "attribution": "st_petersburg_2018_hermitage_general_staff_music",
-        "width": 3840,
-        "height": 2880,
-        "verifiedAt": "2026-06-13T22:17:58.462Z",
+        "width": 4320,
+        "height": 3240,
+        "verifiedAt": "2026-06-30T03:30:07.223Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -2477,7 +2477,7 @@
         "attribution": "picture taken and uploaded by Paul Hermans",
         "width": 1048,
         "height": 1525,
-        "verifiedAt": "2026-06-13T22:17:59.029Z",
+        "verifiedAt": "2026-06-30T03:30:12.843Z",
         "confidence": "medium",
         "notes": "Resolved from Commons (2 matching signals)."
       }
@@ -2539,7 +2539,7 @@
         "attribution": "Image URL:http://www.henri-matisse.net/paintings/ab.html",
         "width": 700,
         "height": 559,
-        "verifiedAt": "2026-06-13T21:00:15.259Z",
+        "verifiedAt": "2026-06-30T03:30:17.594Z",
         "confidence": "medium",
         "notes": "Resolved from Commons (2 matching signals)."
       }
@@ -2632,7 +2632,7 @@
         "attribution": "wikipaintings and Pushkin Museum",
         "width": 806,
         "height": 1417,
-        "verifiedAt": "2026-06-13T22:18:07.212Z",
+        "verifiedAt": "2026-06-30T03:30:23.996Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -2694,7 +2694,7 @@
         "attribution": "https://archive.org/details/toutloeuvrepeint0000unse",
         "width": 245,
         "height": 302,
-        "verifiedAt": "2026-06-13T22:18:07.560Z",
+        "verifiedAt": "2026-06-30T03:30:29.783Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -2725,7 +2725,7 @@
         "attribution": "https://archive.org/details/toutloeuvrepeint0000unse",
         "width": 136,
         "height": 337,
-        "verifiedAt": "2026-06-13T22:18:07.849Z",
+        "verifiedAt": "2026-06-30T03:30:32.970Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -2818,7 +2818,7 @@
         "attribution": "State Hermitage Museum",
         "width": 710,
         "height": 575,
-        "verifiedAt": "2026-06-13T22:18:08.260Z",
+        "verifiedAt": "2026-06-30T03:30:42.749Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -2849,7 +2849,7 @@
         "attribution": "Hermitage Museum",
         "width": 1600,
         "height": 1341,
-        "verifiedAt": "2026-06-13T21:00:40.309Z",
+        "verifiedAt": "2026-06-30T03:30:44.748Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -2911,7 +2911,7 @@
         "attribution": "https://archive.org/details/toutloeuvrepeint0000unse",
         "width": 228,
         "height": 341,
-        "verifiedAt": "2026-06-13T22:18:16.150Z",
+        "verifiedAt": "2026-06-30T03:30:53.000Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -3438,7 +3438,7 @@
         "attribution": "Own work",
         "width": 3357,
         "height": 3456,
-        "verifiedAt": "2026-06-13T21:01:20.352Z",
+        "verifiedAt": "2026-06-30T03:31:29.211Z",
         "confidence": "medium",
         "notes": "Resolved from Commons (2 matching signals)."
       }
@@ -5019,7 +5019,7 @@
         "attribution": "Internet",
         "width": 1463,
         "height": 2049,
-        "verifiedAt": "2026-06-13T21:03:06.916Z",
+        "verifiedAt": "2026-06-30T03:33:22.439Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -5050,7 +5050,7 @@
         "attribution": "https://www.hermitagemuseum.org/wps/portal/hermitage/digital-collection/01.+paintings/28714",
         "width": 1920,
         "height": 1561,
-        "verifiedAt": "2026-06-13T21:03:09.220Z",
+        "verifiedAt": "2026-06-30T03:33:24.466Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -5079,9 +5079,9 @@
         "license": "Public domain",
         "artistCredit": "Henri Rousseau",
         "attribution": "Hermitage Torrent (.torrent with info-hash)",
-        "width": 3840,
-        "height": 3166,
-        "verifiedAt": "2026-06-13T22:18:41.719Z",
+        "width": 4096,
+        "height": 3377,
+        "verifiedAt": "2026-06-30T03:33:27.446Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -5143,7 +5143,7 @@
         "attribution": "Pushkin Museum",
         "width": 779,
         "height": 600,
-        "verifiedAt": "2026-06-13T21:03:13.835Z",
+        "verifiedAt": "2026-06-30T03:33:31.537Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -5174,7 +5174,7 @@
         "attribution": "Own work",
         "width": 2736,
         "height": 3648,
-        "verifiedAt": "2026-06-13T21:03:18.513Z",
+        "verifiedAt": "2026-06-30T03:33:34.704Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -5205,7 +5205,7 @@
         "attribution": "http://www.the-athenaeum.org/art/list.php?m=a&amp;s=du&amp;aid=1709",
         "width": 1023,
         "height": 838,
-        "verifiedAt": "2026-06-13T22:19:00.249Z",
+        "verifiedAt": "2026-06-30T03:33:38.492Z",
         "confidence": "medium",
         "notes": "Resolved from Commons (2 matching signals)."
       }
@@ -5236,7 +5236,7 @@
         "attribution": "http://www.the-athenaeum.org/art/list.php?m=a&amp;s=du&amp;aid=1709",
         "width": 1230,
         "height": 904,
-        "verifiedAt": "2026-06-13T21:03:24.358Z",
+        "verifiedAt": "2026-06-30T03:33:42.314Z",
         "confidence": "medium",
         "notes": "Resolved from Commons (2 matching signals)."
       }
@@ -5267,7 +5267,7 @@
         "attribution": "NeWest Museum [1]",
         "width": 1280,
         "height": 1011,
-        "verifiedAt": "2026-06-13T22:19:08.523Z",
+        "verifiedAt": "2026-06-30T03:33:44.749Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -5298,7 +5298,7 @@
         "attribution": "http://www.the-athenaeum.org/art/list.php?m=a&amp;s=du&amp;aid=1709",
         "width": 1260,
         "height": 1007,
-        "verifiedAt": "2026-06-13T22:19:09.596Z",
+        "verifiedAt": "2026-06-30T03:33:48.233Z",
         "confidence": "high",
         "notes": "Resolved from Commons (5 matching signals)."
       }
@@ -5360,7 +5360,7 @@
         "attribution": "http://www.the-athenaeum.org/art/list.php?m=a&amp;s=du&amp;aid=1709",
         "width": 1280,
         "height": 982,
-        "verifiedAt": "2026-06-13T22:19:10.731Z",
+        "verifiedAt": "2026-06-30T03:33:53.620Z",
         "confidence": "medium",
         "notes": "Resolved from Commons (2 matching signals)."
       }
@@ -5391,7 +5391,7 @@
         "attribution": "http://massimoart.blogspot.fr/2013/12/albert-marquet_17.html",
         "width": 1280,
         "height": 939,
-        "verifiedAt": "2026-06-13T21:03:37.002Z",
+        "verifiedAt": "2026-06-30T03:33:55.741Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -5422,7 +5422,7 @@
         "attribution": "http://www.the-athenaeum.org/art/list.php?m=a&amp;s=du&amp;aid=1709",
         "width": 1197,
         "height": 970,
-        "verifiedAt": "2026-06-13T21:03:40.127Z",
+        "verifiedAt": "2026-06-30T03:33:59.170Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -5453,7 +5453,7 @@
         "attribution": "NeWest Museum [1]",
         "width": 1280,
         "height": 1044,
-        "verifiedAt": "2026-06-13T22:19:26.615Z",
+        "verifiedAt": "2026-06-30T03:34:02.975Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -5670,7 +5670,7 @@
         "attribution": "Own work",
         "width": 2620,
         "height": 2332,
-        "verifiedAt": "2026-06-13T21:03:57.020Z",
+        "verifiedAt": "2026-06-30T03:34:17.111Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -5732,7 +5732,7 @@
         "attribution": "Own work",
         "width": 3126,
         "height": 2100,
-        "verifiedAt": "2026-06-13T21:04:01.426Z",
+        "verifiedAt": "2026-06-30T03:34:22.670Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -5763,7 +5763,7 @@
         "attribution": "Own work",
         "width": 2896,
         "height": 2520,
-        "verifiedAt": "2026-06-13T21:04:03.362Z",
+        "verifiedAt": "2026-06-30T03:34:25.133Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -5918,7 +5918,7 @@
         "attribution": "Hermitage",
         "width": 1920,
         "height": 1481,
-        "verifiedAt": "2026-06-13T21:04:10.911Z",
+        "verifiedAt": "2026-06-30T03:34:32.301Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -5949,7 +5949,7 @@
         "attribution": "Own work",
         "width": 2116,
         "height": 2720,
-        "verifiedAt": "2026-06-13T21:04:13.099Z",
+        "verifiedAt": "2026-06-30T03:34:34.387Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -5980,7 +5980,7 @@
         "attribution": "https://pushkinmuseum.art/data/fonds/europe_and_america/j/2001_3000/zh_3328/index.php?lang=en",
         "width": 810,
         "height": 1200,
-        "verifiedAt": "2026-06-13T22:20:15.225Z",
+        "verifiedAt": "2026-06-30T03:34:36.572Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -6042,7 +6042,7 @@
         "attribution": "Eugène Carrière",
         "width": 2794,
         "height": 3415,
-        "verifiedAt": "2026-06-13T21:04:20.776Z",
+        "verifiedAt": "2026-06-30T03:34:40.533Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -6381,9 +6381,9 @@
         "license": "Public domain",
         "artistCredit": "Armand Guillaumin",
         "attribution": "https://www.parismuseescollections.paris.fr/en/node/152929",
-        "width": 3840,
-        "height": 2815,
-        "verifiedAt": "2026-06-13T22:20:27.580Z",
+        "width": 4091,
+        "height": 2999,
+        "verifiedAt": "2026-06-30T03:35:06.446Z",
         "confidence": "medium",
         "notes": "Resolved from Commons (2 matching signals)."
       }
@@ -6414,7 +6414,7 @@
         "attribution": "Own work",
         "width": 2396,
         "height": 2008,
-        "verifiedAt": "2026-06-13T21:04:47.170Z",
+        "verifiedAt": "2026-06-30T03:35:09.768Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -6538,7 +6538,7 @@
         "attribution": "Own work",
         "width": 2199,
         "height": 2631,
-        "verifiedAt": "2026-06-13T21:04:55.487Z",
+        "verifiedAt": "2026-06-30T03:35:20.654Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -6569,7 +6569,7 @@
         "attribution": "http://www.oceansbridge.com/oil-paintings/product/78236/viewofvenicefromthesea",
         "width": 1476,
         "height": 982,
-        "verifiedAt": "2026-06-13T21:04:57.942Z",
+        "verifiedAt": "2026-06-30T03:35:22.580Z",
         "confidence": "medium",
         "notes": "Resolved from Commons (2 matching signals)."
       }
@@ -6662,7 +6662,7 @@
         "attribution": "Hermitage Museum",
         "width": 1920,
         "height": 1093,
-        "verifiedAt": "2026-06-13T21:05:04.426Z",
+        "verifiedAt": "2026-06-30T03:35:30.172Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -6691,9 +6691,9 @@
         "license": "Public domain",
         "artistCredit": "James McNeill Whistler",
         "attribution": "https://collection.pushkinmuseum.art/en/entity/OBJECT/79271",
-        "width": 3840,
-        "height": 2240,
-        "verifiedAt": "2026-06-13T22:20:59.313Z",
+        "width": 4813,
+        "height": 2808,
+        "verifiedAt": "2026-06-30T03:35:31.853Z",
         "confidence": "high",
         "notes": "Resolved from Commons (5 matching signals)."
       }
@@ -6784,9 +6784,9 @@
         "license": "Public domain",
         "artistCredit": "Frits Thaulow",
         "attribution": "Pushkin Museum, Moscow",
-        "width": 3840,
-        "height": 4860,
-        "verifiedAt": "2026-06-13T22:21:03.556Z",
+        "width": 8253,
+        "height": 10445,
+        "verifiedAt": "2026-06-30T03:35:38.369Z",
         "confidence": "high",
         "notes": "Resolved from Commons (5 matching signals)."
       }
@@ -6815,9 +6815,9 @@
         "license": "Public domain",
         "artistCredit": "Frits Thaulow",
         "attribution": "The Museum of Modern Western Art (NWM), Inv. Nr. GMNZI: 217",
-        "width": 3840,
-        "height": 2837,
-        "verifiedAt": "2026-06-13T22:21:07.662Z",
+        "width": 10000,
+        "height": 7388,
+        "verifiedAt": "2026-06-30T03:35:40.678Z",
         "confidence": "high",
         "notes": "Resolved from Commons (5 matching signals)."
       }
@@ -6879,7 +6879,7 @@
         "attribution": "https://hermitagemuseum.org/wps/portal/hermitage/digital-collection/01.+paintings/29435?lng=en",
         "width": 1170,
         "height": 1920,
-        "verifiedAt": "2026-06-13T22:21:08.524Z",
+        "verifiedAt": "2026-06-30T03:35:44.222Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -6910,7 +6910,7 @@
         "attribution": "Andreas F. Borchert",
         "width": 1666,
         "height": 2552,
-        "verifiedAt": "2026-06-13T21:05:22.049Z",
+        "verifiedAt": "2026-06-30T03:35:46.122Z",
         "confidence": "medium",
         "notes": "Resolved from Commons (2 matching signals)."
       }
@@ -7065,7 +7065,7 @@
         "attribution": "Own work",
         "width": 3280,
         "height": 2208,
-        "verifiedAt": "2026-06-13T21:05:31.758Z",
+        "verifiedAt": "2026-06-30T03:35:57.267Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -7158,7 +7158,7 @@
         "attribution": "Own work",
         "width": 1575,
         "height": 1393,
-        "verifiedAt": "2026-06-13T21:05:36.733Z",
+        "verifiedAt": "2026-06-30T03:36:03.419Z",
         "confidence": "high",
         "notes": "Resolved from Commons (5 matching signals)."
       }
@@ -7311,9 +7311,9 @@
         "license": "Public domain",
         "artistCredit": "Gustave Courbet",
         "attribution": "1. The Yorck Project (2002) 10.000 Meisterwerke der Malerei (DVD-ROM), distributed by DIRECTMEDIA Publishing GmbH. ISBN: 3936122202. 2. Bridgeman Art Library: Object 565523. The Museum of Modern Western Art, Inv. Nr. GMNZI: 704. Puskin Museum, Moscow",
-        "width": 3840,
-        "height": 2617,
-        "verifiedAt": "2026-06-13T22:21:33.219Z",
+        "width": 5460,
+        "height": 3721,
+        "verifiedAt": "2026-06-30T03:36:18.114Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -7344,7 +7344,7 @@
         "attribution": "Own work",
         "width": 2412,
         "height": 2080,
-        "verifiedAt": "2026-06-13T21:05:53.021Z",
+        "verifiedAt": "2026-06-30T03:36:21.574Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -7623,7 +7623,7 @@
         "attribution": "Hermitage Museum",
         "width": 1920,
         "height": 1563,
-        "verifiedAt": "2026-06-13T21:06:14.516Z",
+        "verifiedAt": "2026-06-30T03:36:43.265Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -7716,7 +7716,7 @@
         "attribution": "https://sammlung.staedelmuseum.de/de/werk/maedchen-mit-kuh",
         "width": 5316,
         "height": 4059,
-        "verifiedAt": "2026-06-13T21:06:24.103Z",
+        "verifiedAt": "2026-06-30T03:36:54.248Z",
         "confidence": "medium",
         "notes": "Resolved from Commons (2 matching signals)."
       }
@@ -7964,7 +7964,7 @@
         "attribution": "Own work, picture of a sculpture by w:Auguste Rodin",
         "width": 1000,
         "height": 681,
-        "verifiedAt": "2026-06-13T21:06:40.555Z",
+        "verifiedAt": "2026-06-30T03:37:12.302Z",
         "confidence": "medium",
         "notes": "Resolved from Commons (2 matching signals)."
       }
