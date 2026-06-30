@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30T07:50:22.361Z",
+  "generated": "2026-06-30T08:28:40.744Z",
   "count": 259,
   "artworks": [
     {
@@ -2529,7 +2529,7 @@
         "source": "wikimedia_commons",
         "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Matisse_the_study_of_moreau.jpg",
         "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Matisse_the_study_of_moreau.jpg?width=1000",
-        "localPath": null,
+        "localPath": "/images/collection/henri-matisse-the-artist-s-studio-study-jan-1912-1200.webp",
         "sourcePageUrl": null,
         "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Matisse_the_study_of_moreau.jpg",
         "commonsFileName": "Matisse the study of moreau.jpg",
@@ -2539,7 +2539,7 @@
         "attribution": "Image URL:http://www.henri-matisse.net/paintings/ab.html",
         "width": 700,
         "height": 559,
-        "verifiedAt": "2026-06-30T03:30:17.594Z",
+        "verifiedAt": "2026-06-30T08:15:30.915Z",
         "confidence": "medium",
         "notes": "Resolved from Commons (2 matching signals)."
       }
@@ -2839,7 +2839,7 @@
         "source": "wikimedia_commons",
         "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Henri_Matisse%2C_1912-13%2C_Le_caf%C3%A9_Maure_(Arab_Coffeehouse)%2C_oil_on_canvas%2C_176_x_210_cm%2C_Hermitage_Museum.jpg",
         "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Henri_Matisse%2C_1912-13%2C_Le_caf%C3%A9_Maure_(Arab_Coffeehouse)%2C_oil_on_canvas%2C_176_x_210_cm%2C_Hermitage_Museum.jpg?width=1000",
-        "localPath": null,
+        "localPath": "/images/collection/henri-matisse-arab-coffeehouse-1913-1200.webp",
         "sourcePageUrl": null,
         "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Henri_Matisse%2C_1912-13%2C_Le_caf%C3%A9_Maure_(Arab_Coffeehouse)%2C_oil_on_canvas%2C_176_x_210_cm%2C_Hermitage_Museum.jpg",
         "commonsFileName": "Henri Matisse, 1912-13, Le café Maure (Arab Coffeehouse), oil on canvas, 176 x 210 cm, Hermitage Museum.jpg",
@@ -2849,7 +2849,7 @@
         "attribution": "Hermitage Museum",
         "width": 1600,
         "height": 1341,
-        "verifiedAt": "2026-06-30T03:30:44.748Z",
+        "verifiedAt": "2026-06-30T08:15:32.461Z",
         "confidence": "high",
         "notes": "Resolved from Commons (3 matching signals)."
       }
@@ -3428,7 +3428,7 @@
         "source": "wikimedia_commons",
         "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gothic_Pitcher_with_Three_Women_by_Pablo_Picasso.jpg",
         "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Gothic_Pitcher_with_Three_Women_by_Pablo_Picasso.jpg?width=1000",
-        "localPath": null,
+        "localPath": "/images/collection/pablo-picasso-three-women-1908-1200.webp",
         "sourcePageUrl": "https://www.newestmuseum.ru/full/index.php?id=GE_9658&coll=1",
         "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Gothic_Pitcher_with_Three_Women_by_Pablo_Picasso.jpg",
         "commonsFileName": "Gothic Pitcher with Three Women by Pablo Picasso.jpg",
@@ -3438,7 +3438,7 @@
         "attribution": "Own work",
         "width": 3357,
         "height": 3456,
-        "verifiedAt": "2026-06-30T03:31:29.211Z",
+        "verifiedAt": "2026-06-30T08:15:40.650Z",
         "confidence": "medium",
         "notes": "Resolved from Commons (2 matching signals)."
       }
@@ -4978,17 +4978,17 @@
         "source": "wikimedia_commons",
         "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Henri_Rousseau_-_Vue_de_pont_de_S%C3%A8vres.jpg",
         "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Henri_Rousseau_-_Vue_de_pont_de_S%C3%A8vres.jpg?width=1000",
-        "localPath": null,
+        "localPath": "/images/collection/henri-rousseau-view-of-the-pont-de-sevres-with-biplane-balloon-dirigible-1908-1200.webp",
         "sourcePageUrl": null,
         "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Henri_Rousseau_-_Vue_de_pont_de_S%C3%A8vres.jpg",
         "commonsFileName": "Henri_Rousseau_-_Vue_de_pont_de_Sèvres.jpg",
         "commonsSearchUrl": "https://commons.wikimedia.org/w/index.php?search=Henri+Rousseau+View+of+the+Pont+de+S%C3%A8vres+%28with+biplane%2C+balloon%2C+dirigible%29&title=Special%3AMediaSearch&type=image",
-        "license": null,
-        "artistCredit": null,
-        "attribution": null,
-        "width": null,
-        "height": null,
-        "verifiedAt": null,
+        "license": "Public domain",
+        "artistCredit": "Henri Rousseau",
+        "attribution": "Own work, photo by Szilas in Pushkin Museum, Moscow",
+        "width": 2291,
+        "height": 1830,
+        "verifiedAt": "2026-06-30T08:15:49.092Z",
         "confidence": "high",
         "notes": "Direct Wikimedia Commons original (Special:FilePath)."
       }
