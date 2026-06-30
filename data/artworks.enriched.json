@@ -1,5 +1,5 @@
 {
-  "generated": "2026-06-30T07:23:55.959Z",
+  "generated": "2026-06-30T07:50:22.361Z",
   "count": 259,
   "artworks": [
     {
@@ -2033,7 +2033,7 @@
         "source": "wikimedia_commons",
         "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Henri_Matisse%2C_1908%2C_Statuette_and_Vases_on_Oriental_Carpet_(Still_Life_in_Red_of_Venice)%2C_oil_on_canvas%2C_89_x_105_cm%2C_Pushkin_Museum%2C_Moscow.jpg",
         "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Henri_Matisse%2C_1908%2C_Statuette_and_Vases_on_Oriental_Carpet_(Still_Life_in_Red_of_Venice)%2C_oil_on_canvas%2C_89_x_105_cm%2C_Pushkin_Museum%2C_Moscow.jpg?width=1000",
-        "localPath": null,
+        "localPath": "/images/collection/henri-matisse-statuette-and-vases-on-an-oriental-carpet-1908-1200.webp",
         "sourcePageUrl": null,
         "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Henri_Matisse%2C_1908%2C_Statuette_and_Vases_on_Oriental_Carpet_(Still_Life_in_Red_of_Venice)%2C_oil_on_canvas%2C_89_x_105_cm%2C_Pushkin_Museum%2C_Moscow.jpg",
         "commonsFileName": "Henri Matisse, 1908, Statuette and Vases on Oriental Carpet (Still Life in Red of Venice), oil on canvas, 89 x 105 cm, Pushkin Museum, Moscow.jpg",
@@ -2043,7 +2043,7 @@
         "attribution": "Pushkin Museum",
         "width": 1586,
         "height": 1347,
-        "verifiedAt": "2026-06-30T03:29:40.591Z",
+        "verifiedAt": "2026-06-30T07:34:56.752Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -2219,7 +2219,7 @@
         "source": "wikimedia_commons",
         "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nature_morte%2C_cama%C3%AFeu_bleu_par_Henri_Matisse.jpg",
         "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Nature_morte%2C_cama%C3%AFeu_bleu_par_Henri_Matisse.jpg?width=1000",
-        "localPath": null,
+        "localPath": "/images/collection/henri-matisse-still-life-with-a-blue-tablecloth-1909-1200.webp",
         "sourcePageUrl": null,
         "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Nature_morte%2C_cama%C3%AFeu_bleu_par_Henri_Matisse.jpg",
         "commonsFileName": "Nature morte, camaïeu bleu par Henri Matisse.jpg",
@@ -2229,7 +2229,7 @@
         "attribution": "https://www.artchive.com/wp-content/uploads/2023/04/Still-Life-with-Blue-Tablecloth-Matisse-Henri-1909-2.jpg",
         "width": 1919,
         "height": 1438,
-        "verifiedAt": "2026-06-30T03:29:52.194Z",
+        "verifiedAt": "2026-06-30T07:34:58.746Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -2281,7 +2281,7 @@
         "source": "wikimedia_commons",
         "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Henri_matisse%2C_natura_morta_spagnola%2C_1910-1911.jpg",
         "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Henri_matisse%2C_natura_morta_spagnola%2C_1910-1911.jpg?width=1000",
-        "localPath": null,
+        "localPath": "/images/collection/henri-matisse-spanish-still-life-1910-1200.webp",
         "sourcePageUrl": null,
         "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Henri_matisse%2C_natura_morta_spagnola%2C_1910-1911.jpg",
         "commonsFileName": "Henri matisse, natura morta spagnola, 1910-1911.jpg",
@@ -2291,7 +2291,7 @@
         "attribution": "Own work",
         "width": 2047,
         "height": 1650,
-        "verifiedAt": "2026-06-30T03:29:57.386Z",
+        "verifiedAt": "2026-06-30T07:35:07.081Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
@@ -2312,7 +2312,7 @@
         "source": "wikimedia_commons",
         "originalUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Henri_matisse%2C_natura_morta_sivigliana%2C_1910.jpg",
         "thumbnailUrl": "https://commons.wikimedia.org/wiki/Special:FilePath/Henri_matisse%2C_natura_morta_sivigliana%2C_1910.jpg?width=1000",
-        "localPath": null,
+        "localPath": "/images/collection/henri-matisse-seville-still-life-1910-1200.webp",
         "sourcePageUrl": null,
         "commonsFilePage": "https://commons.wikimedia.org/wiki/File:Henri_matisse%2C_natura_morta_sivigliana%2C_1910.jpg",
         "commonsFileName": "Henri matisse, natura morta sivigliana, 1910.jpg",
@@ -2322,7 +2322,7 @@
         "attribution": "Own work",
         "width": 2188,
         "height": 1689,
-        "verifiedAt": "2026-06-30T03:29:59.469Z",
+        "verifiedAt": "2026-06-30T07:35:15.146Z",
         "confidence": "high",
         "notes": "Resolved from Commons (4 matching signals)."
       }
