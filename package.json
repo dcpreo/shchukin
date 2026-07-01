@@ -14,6 +14,7 @@
     "images:resolve": "tsx scripts/resolve-commons-images.ts",
     "images:cache": "tsx scripts/cache-commons-images.ts",
     "images:validate": "tsx scripts/validate-images.ts",
+    "images:review": "tsx scripts/review-candidates.ts",
     "images:build": "npm run images:resolve && npm run images:cache && npm run images:validate"
   },
   "dependencies": {
